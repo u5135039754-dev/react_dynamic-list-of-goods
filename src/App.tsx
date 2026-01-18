@@ -18,6 +18,7 @@ export const App: React.FC = () => {
   };
 
   const handleFirstFive = () => {
+    setError(null);
     goodsAPI
       .getFirstFive()
       .then(setGoods)
