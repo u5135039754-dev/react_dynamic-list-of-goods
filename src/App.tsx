@@ -27,11 +27,13 @@ export const App: React.FC = () => {
       );
   };
 
-  const handleRedButton = () =>
+  const handleRedButton = () => {
+    setError(null);
     goodsAPI
       .getRedGoods()
       .then(setGoods)
       .catch(err => setError(err.message || 'Something went wrong'));
+  };
 
   return (
     <div className="App">
